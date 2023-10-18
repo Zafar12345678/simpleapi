@@ -1,7 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const userRoutes = require('./routes/userRoutes');
+const itemRoutes = require('./routes/itemRoute');
 const app = express();
+
+const cors = require('cors');
+app.use(cors());
+
 
 // Database connection
 mongoose.connect("mongodb+srv://merningday123:merningday123@cluster0.6llqgoh.mongodb.net/software?retryWrites=true&w=majority", {
@@ -17,10 +21,9 @@ mongoose.connect("mongodb+srv://merningday123:merningday123@cluster0.6llqgoh.mon
 
 // Middleware
 app.use(express.json());
-app.use('/uploads/images', express.static('uploads/images'));
 
 // Routes
-app.use('/api', userRoutes);
+app.use('/api', itemRoutes);
 
 // Start the server
 const PORT = 3000;

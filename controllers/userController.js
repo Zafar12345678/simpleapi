@@ -8,7 +8,7 @@ const getUser = async (req, res) => {
       return {
         name: user.name,
         email: user.email,
-        image: `${req.protocol}://${req.get('host')}/uploads/images/${user.image}`,
+        image: `${req.protocol}://${req.get('host')}/uploads/Images/${user.image}`,
       };
     });
     res.status(200).json(usersWithImages);
