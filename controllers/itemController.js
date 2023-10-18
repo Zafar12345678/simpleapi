@@ -64,6 +64,12 @@ const deleteItem = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+//git init
+//git add .
+//git commit -m "hello dosto"
+//git remote add origin <https://github.com/Zafar12345678/thisapi.git>
+//
+//git push -u origin master
 
 module.exports = {
   createItem,
