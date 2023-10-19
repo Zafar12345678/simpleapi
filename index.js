@@ -1,13 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const itemRoutes = require('./routes/itemRoute');
-const userRoutes = require('./routes/userRoutes');
+
 
 
 const app = express();
 
-const cors = require('cors');
-app.use(cors());
+//const cors = require('cors');
+//app.use(cors());
 
 
 // Database connection
@@ -27,7 +27,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api', itemRoutes);
-app.use('/api', userRoutes);
+
 
 // Start the server
 const PORT = 3000;
